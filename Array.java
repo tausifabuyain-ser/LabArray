@@ -31,22 +31,68 @@
 //     }
 // }
 
-public class Array{
+//2 
+
+// public class Array{
+//     public static void main(String[] args) {
+//         int arr[]={23,8,9,1,0,-2,12,45,25,7};
+
+//         int min = arr[0];
+//         int max = arr[0];
+
+//         for (int i = 1; i<arr.length;i++){
+//             if(arr[i]>max){
+//                  max = arr[i];
+//             }
+//             if(arr[i]<min){
+//                 min = arr[i];
+//             }
+//         }
+
+//         System.out.println("The max and min are: "+max+","+min);
+//     }
+// }
+
+//3
+
+public class Array {
+
     public static void main(String[] args) {
-        int arr[]={23,8,9,1,0,-2,12,45,25,7};
+        int arr[] = { 2, 7, 2, 9, 8, 4, 12, 3, 7, 8, 5 };
 
-        int min = arr[0];
-        int max = arr[0];
+        int countEven = 0;
+        int countOdd = 0;
 
-        for (int i = 1; i<arr.length;i++){
-            if(arr[i]>max){
-                 max = arr[i];
-            }
-            if(arr[i]<min){
-                min = arr[i];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                countEven++;
+
+            } else {
+                countOdd++;
             }
         }
 
-        System.out.println("The max and min are: "+max+","+min);
+        int even[] = new int[countEven];
+        int odd[] = new int[countOdd];
+
+        int eIndex = 0;
+        int oIndex = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                even[eIndex++] = arr[i];
+            } else {
+                odd[oIndex++] = arr[i];
+            }
+        }
+
+        System.out.print("Even array is ");
+        for (int i = 0; i < even.length; i++) {
+            System.out.print(even[i] + ",");
+        }
+        System.out.println();
+        System.out.print("Even array is ");
+        for (int i = 0; i < odd.length; i++) {
+            System.out.print(odd[i] + ",");
+        }
     }
 }
