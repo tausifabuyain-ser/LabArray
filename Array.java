@@ -55,44 +55,122 @@
 
 //3
 
+// public class Array {
+
+//     public static void main(String[] args) {
+//         int arr[] = { 2, 7, 2, 9, 8, 4, 12, 3, 7, 8, 5 };
+
+//         int countEven = 0;
+//         int countOdd = 0;
+
+//         for (int i = 0; i < arr.length; i++) {
+//             if (arr[i] % 2 == 0) {
+//                 countEven++;
+
+//             } else {
+//                 countOdd++;
+//             }
+//         }
+
+//         int even[] = new int[countEven];
+//         int odd[] = new int[countOdd];
+
+//         int eIndex = 0;
+//         int oIndex = 0;
+//         for (int i = 0; i < arr.length; i++) {
+//             if (arr[i] % 2 == 0) {
+//                 even[eIndex++] = arr[i];
+//             } else {
+//                 odd[oIndex++] = arr[i];
+//             }
+//         }
+
+//         System.out.print("Even array is ");
+//         for (int i = 0; i < even.length; i++) {
+//             System.out.print(even[i] + ",");
+//         }
+//         System.out.println();
+//         System.out.print("Even array is ");
+//         for (int i = 0; i < odd.length; i++) {
+//             System.out.print(odd[i] + ",");
+//         }
+//     }
+// }
+
+//sort in ascending order
+
 public class Array {
 
     public static void main(String[] args) {
-        int arr[] = { 2, 7, 2, 9, 8, 4, 12, 3, 7, 8, 5 };
+        int[] arr = { 9, 0, 3, 2, -1, 8 };
 
-        int countEven = 0;
-        int countOdd = 0;
+        printArray(arr);
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 == 0) {
-                countEven++;
-
-            } else {
-                countOdd++;
+        for(int i=0;i<arr.length;i++){
+            for(int j= i +1;j<arr.length;j++){
+                if(arr[i]>arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j]=temp;
+                }
             }
         }
 
-        int even[] = new int[countEven];
-        int odd[] = new int[countOdd];
+        System.out.println("\n After ascending ");
+        printArray(arr);
+    }
 
-        int eIndex = 0;
-        int oIndex = 0;
+    public static void printArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 == 0) {
-                even[eIndex++] = arr[i];
-            } else {
-                odd[oIndex++] = arr[i];
-            }
+            System.out.print(arr[i] + " ");
         }
-
-        System.out.print("Even array is ");
-        for (int i = 0; i < even.length; i++) {
-            System.out.print(even[i] + ",");
-        }
-        System.out.println();
-        System.out.print("Even array is ");
-        for (int i = 0; i < odd.length; i++) {
-            System.out.print(odd[i] + ",");
-        }
+        
     }
 }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+// }
+
+// public class Array {
+//     public static void main(String[] args) {
+//         int[] arr = {9, -5, 7, 9, -5, 5, 7};
+
+//         System.out.println("Original array:");
+//         printArray(arr);
+
+//         // Sorting logic (Bubble Sort)
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = i + 1; j < arr.length; j++) {
+//                 if (arr[i] > arr[j]) {
+//                     // swap arr[i] and arr[j]
+//                     int temp = arr[i];
+//                     arr[i] = arr[j];
+//                     arr[j] = temp;
+//                 }
+//             }
+//         }
+
+//         System.out.println("\nArray after sorting in ascending order:");
+//         printArray(arr);
+//     }
+
+//     // Helper method to print array
+//     public static void printArray(int[] arr) {
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i] + " ");
+//         }
+//         System.out.println();
+//     }
+// }
